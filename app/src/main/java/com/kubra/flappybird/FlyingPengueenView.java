@@ -17,7 +17,7 @@ public class FlyingPengueenView extends View {
     private Paint scorePaint = new Paint();
     private Bitmap life[]=new Bitmap[2];
 
-    private Bitmap pengueen[] = new Bitmap[2];
+    private Bitmap pengueen1[] = new Bitmap[2];
     private int pengueenX=10;
     private int pengueenY;
     private int pengueenSpeed;
@@ -50,8 +50,8 @@ public class FlyingPengueenView extends View {
         canvasHeight = canvas.getHeight();
 
 
-        int minPengueenY = pengueen[0].getHeight();
-        int maxPengueenY =canvasHeight - pengueen[0].getHeight() * 3;
+        int minPengueenY = pengueen1[0].getHeight();
+        int maxPengueenY =canvasHeight - pengueen1[0].getHeight() * 3;
         pengueenY = pengueenY + pengueenSpeed;
         if(pengueenY<minPengueenY)
         {
@@ -65,11 +65,11 @@ public class FlyingPengueenView extends View {
         if(touch)
         {
 
-            canvas.drawBitmap(pengueen[1],pengueenX,pengueenY,null);
+            canvas.drawBitmap(pengueen1[1],pengueenX,pengueenY,null);
             touch=false;
         }
         else{
-            canvas.drawBitmap(pengueen[1],pengueenX,pengueenY,null);
+            canvas.drawBitmap(pengueen1[1],pengueenX,pengueenY,null);
         }
 
 
