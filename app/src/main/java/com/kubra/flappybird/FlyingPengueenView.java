@@ -9,7 +9,7 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.view.View;
 
-public class flyingPengueenView extends View {
+public class FlyingPengueenView extends View {
 
     private Bitmap pengueen;
 
@@ -17,7 +17,7 @@ public class flyingPengueenView extends View {
     private Paint scorePaint = new Paint();
     private Bitmap life[]=new Bitmap[2];
 
-    private Bitmap pengueen1[] = new Bitmap[2];
+    private Bitmap pengueen[] = new Bitmap[2];
     private int pengueenX=10;
     private int pengueenY;
     private int pengueenSpeed;
@@ -26,7 +26,7 @@ public class flyingPengueenView extends View {
 
     private int canvasWidth, canvasHeight;
 
-    public flyingPengueenView(Context context){
+    public FlyingPengueenView(Context context){
         super(context);
 
         pengueen= BitmapFactory.decodeResource(getResources(), R.drawable.pengueen1);
@@ -50,8 +50,8 @@ public class flyingPengueenView extends View {
         canvasHeight = canvas.getHeight();
 
 
-        int minPengueenY = pengueen1[0].getHeight();
-        int maxPengueenY =canvasHeight - pengueen1[0].getHeight() * 3;
+        int minPengueenY = pengueen[0].getHeight();
+        int maxPengueenY =canvasHeight - pengueen[0].getHeight() * 3;
         pengueenY = pengueenY + pengueenSpeed;
         if(pengueenY<minPengueenY)
         {
@@ -65,11 +65,11 @@ public class flyingPengueenView extends View {
         if(touch)
         {
 
-            canvas.drawBitmap(pengueen1[1],pengueenX,pengueenY,null);
+            canvas.drawBitmap(pengueen[1],pengueenX,pengueenY,null);
             touch=false;
         }
         else{
-            canvas.drawBitmap(pengueen1[1],pengueenX,pengueenY,null);
+            canvas.drawBitmap(pengueen[1],pengueenX,pengueenY,null);
         }
 
 

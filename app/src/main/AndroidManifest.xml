@@ -19,6 +19,6 @@
         <activity android:name=".MainActivity">
 
         </activity>
-    </application>
+      </application>
 
 </manifest>

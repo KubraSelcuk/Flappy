@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    private flyingPengueenView gameView;
+    private FlyingPengueenView gameView;
 
 
 
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        gameView = new flyingPengueenView(this);
+        gameView = new FlyingPengueenView(this);
         setContentView(gameView);
 
     }
