@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FlappyBird</string>
+    <string name="flying_pengueen">Flying Pengueen</string>
+    <string name="todo">TODO</string>
 </resources>
